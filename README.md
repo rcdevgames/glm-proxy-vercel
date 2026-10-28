@@ -312,6 +312,9 @@ Environment variables (`.env` or Vercel):
 
    Or push to main branch if auto-deploy is on.
 
+   `vercel.json` caps `maxDuration` at 300s (Hobby plan limit). If you raise it,
+   set `UPSTREAM_TIMEOUT_MS` below that value so the proxy aborts before Vercel does.
+
 4. **Use the public URL:**
 
    ```bash

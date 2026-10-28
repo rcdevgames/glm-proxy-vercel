@@ -30,7 +30,7 @@ function requireAuth(req, res, next) {
   if (extractKey(req) === config.proxyApiKey) return next();
   return res.status(401).json({
     error: {
-      message: 'Invalid or missing API key. Send Authorization: Bearer <PROXY_API_KEY>.',
+      message: 'Invalid or missing API key.',
       type: 'invalid_request_error',
       code: 'invalid_api_key',
     },
